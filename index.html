@@ -388,7 +388,42 @@
       const db = getFirestore(app);
     
       // Form submission event listener
+      document.getElementById('submit').addEventListener('click', async (event) => {
+        event.preventDefault(); // Prevent default form submission
       
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('mail').value.trim();
+        const comment = document.getElementById('area').value.trim();
+      
+        // Validate input fields
+        if (!name || !email || !comment) {
+          alert("All fields are required!");
+          return;
+        }
+      
+        try {
+          // Add data to Firestore collection
+          const docRef = await addDoc(collection(db, "contacts"), {
+            name: name,
+            email: email,
+            comment: comment,
+            timestamp: new Date() // Store submission time
+          });
+      
+          // Show success message
+          alert("Your message has been sent successfully!");
+          console.log("Document written with ID: ", docRef.id);
+      
+          // Clear form fields after submission
+          document.getElementById('name').value = "";
+          document.getElementById('mail').value = "";
+          document.getElementById('area').value = "";
+        } catch (error) {
+          console.error("Error adding document: ", error);
+          alert("An error occurred. Please try again.");
+        }
+      });
     </script>
     
     <script src="portfolio.js"></script>
