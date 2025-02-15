@@ -609,7 +609,7 @@ h5 {
 
 .degree {
     font-size: 15px;
-    margin:10px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 
@@ -912,6 +912,16 @@ form #submit:hover {
     }
 }
 
+@media (max-width:895px) {
+    .nav-item {
+        width: -webkit-fill-available;
+    }
+
+    .nav-link {
+        width: auto;
+    }
+}
+
 @media (max-width: 750px) {
 
     /*MENU BAR STARTED*/
@@ -1042,6 +1052,31 @@ form #submit:hover {
 
 }
 
+@media(max-width:420px) {
+    .pi {
+        width: 150px;
+    }
+
+    .project {
+        height: auto;
+    }
+
+    .project h5 {
+        font-size: 25px;
+    }
+
+    .project p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .proj-img {
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 @media(max-width:430px) {
     @media(max-height:900px) {
         .home {
@@ -1058,7 +1093,7 @@ form #submit:hover {
 
         #home p {
             font-size: 20px;
-            
+
         }
 
         #home h6 {
