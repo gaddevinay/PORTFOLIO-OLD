@@ -74,7 +74,7 @@ main {
     margin-top: 0px;
     text-align: center;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 2px #fcfcfc;
+    /*text-shadow: 0 0 2px #fcfcfc;*/
     width: fit-content;
     display: list-item;
 }
@@ -140,13 +140,13 @@ main {
     margin: 0;
     margin-top: 6px;
     transition: 0.2s;
-    box-shadow: 0px 0px 20px 2px #00ffe7;
+    box-shadow: 0px 0px 20px 0px #00ffe7;
 }
 
 .change #first {
     transform: translate(0px, 10px) rotate(45deg);
     border: 2px solid rgb(197, 3, 3);
-    box-shadow: 0px 0px 20px 2px red;
+    box-shadow: 0px 0px 20px 0px red;
 }
 
 .change #second {
@@ -157,7 +157,7 @@ main {
 .change #third {
     transform: translate(0px, -10px) rotate(-45deg);
     border: 2px solid rgb(197, 3, 3);
-    box-shadow: 0px 0px 20px 2px red;
+    box-shadow: 0px 0px 20px 0px red;
 }
 
 .nav-bar a {
@@ -169,7 +169,7 @@ main {
 .home {
     width: fit-content;
     height: auto;
-    min-height: 1000px;
+    min-height: 100vh;
     display: flex;
     padding-top: 100px;
     flex-direction: column;
@@ -178,7 +178,7 @@ main {
 #home-div {
     height: auto;
     width: fit-content;
-    text-shadow: 0px 0px 1.5px;
+    /*text-shadow: 0px 0px 1.5px;*/
     text-align: justify;
 }
 
@@ -213,12 +213,12 @@ h5 {
 
 #home-div h4 span {
     color: rgb(0, 204, 255);
-    text-shadow: 0px 0px 5px;
+    /*text-shadow: 0px 0px 5px;*/
 }
 
 #home-div h6 span {
     color: #00fc69;
-    text-shadow: 0px 0px 5px;
+    /*text-shadow: 0px 0px 5px;*/
 
 }
 
@@ -348,7 +348,7 @@ h5 {
 #home-img-div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 150px;
+    margin-top: 60px;
 }
 
 #profile-img {
@@ -534,7 +534,7 @@ h5 {
     border-radius: 100%;
     border: 0px solid #17191B;
     left: 11px;
-    box-shadow: 0 0 9px 4px #00e9ff;
+    box-shadow: 0 0 8px 0px #00e9ff;
     top: 8px;
 }
 
@@ -575,7 +575,7 @@ h5 {
     height: 12px;
     background: #00e9ff;
     border: 0px solid #17191B;
-    box-shadow: 0 0 6px 2px #00e9ff;
+    box-shadow: 0 0 6px 0px #00e9ff;
     top: 7px;
     left: 10px;
     border-radius: 100%;
