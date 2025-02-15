@@ -292,7 +292,7 @@ h5 {
     right: 40%;
     translate: (-50%, -50%);
     width: 350px;
-    height: 454px;
+    height: 489px;
     background: repeating-conic-gradient(from var(--a), #0059ff 0%, #00b7ff 5%, transparent 5%, transparent 40%, #0059ff 50%);
     animation: animate 4s linear infinite;
     border-radius: 20px;
@@ -889,14 +889,14 @@ form #submit:hover {
         justify-content: flex-end;
         align-items: center;
         width: 300px;
-        height: 389px;
+        height: 419px;
         left: 0;
         right: 0;
     }
 
     #home-img::before {
         width: 300px;
-        height: 389px;
+        height: 419px;
     }
 
     #home-img-div {
@@ -1070,12 +1070,12 @@ form #submit:hover {
 
         #home-img {
             width: 250px;
-            height: 324px;
+            height: 349px;
         }
 
         #home-img::before {
             width: 250px;
-            height: 324px;
+            height: 349px;
         }
     }
 }
