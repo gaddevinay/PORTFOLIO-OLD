@@ -986,7 +986,7 @@ form #submit:hover {
     }
 
     #home-div p {
-        text-align: calc(start, end);
+        text-align: justify;
     }
 
     main {
@@ -1058,6 +1058,7 @@ form #submit:hover {
 
         #home p {
             font-size: 20px;
+            
         }
 
         #home h6 {

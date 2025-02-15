@@ -14,7 +14,7 @@
 </head>
 
 <body id="body">
-  <section >
+  <section>
     <!-- Navbar  Section Start -->
     <nav class="nav-bar">
       <div id="row">
@@ -50,8 +50,10 @@
             <div id="icons">
               <a href="https://github.com/gaddevinay/" target="_blank"><i class="bx bxl-github"></i></a>
               <a href="https://www.instagram.com/gadde_vinay" target="_blank"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/vinay-gadde/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
-              <a href="https://www.facebook.com/gaddevinay2005" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+              <a href="https://www.linkedin.com/in/vinay-gadde/" target="_blank"><i
+                  class="bx bxl-linkedin-square"></i></a>
+              <a href="https://www.facebook.com/gaddevinay2005" target="_blank"><i
+                  class="bx bxl-facebook-circle"></i></a>
             </div>
             <a id="downloadcv" href="Resume Vinay.pdf" target="_blank">download cv</a>
           </div>
@@ -265,8 +267,7 @@
                           <p>-Unstop</p>
                         </div>
                       </a>
-                      <a href="CERTIFICATES/Gadde Vinay_certificate.pdf"
-                        target="_blank">
+                      <a href="CERTIFICATES/Gadde Vinay_certificate.pdf" target="_blank">
                         <div class="certificate" id="cert-5">
                           <div class="cert-img" id="cert-img-5">
                             <img src="CERTIFICATES/skilldzirecertficate.png" alt="" class="ci" id="ci5">
@@ -293,7 +294,8 @@
         <div class="allprojects">
           <div class="project" id="proj-1">
             <div class="proj-img" id="proj-img-1">
-              <a href="https://github.com/gaddevinay/NETFLIX-CLONE" target="_blank"><img src="Images/netflix-proj.PNG" alt="" class="pi" id="pi1"></a>
+              <a href="https://github.com/gaddevinay/NETFLIX-CLONE" target="_blank"><img src="Images/netflix-proj.PNG"
+                  alt="" class="pi" id="pi1"></a>
             </div>
             <h5>Netflix-Clone</h5>
             <p>I have successfully developed a Netflix clone using HTML, CSS, and JavaScript. This project showcases my
@@ -301,7 +303,8 @@
           </div>
           <div class="project" id="proj-2">
             <div class="proj-img" id="proj-img-2">
-              <a href="https://gaddevinay.github.io/Calculator/" target="_blank"><img src="Images/calci-proj.PNG" alt="" class="pi" id="pi2"></a>
+              <a href="https://gaddevinay.github.io/Calculator/" target="_blank"><img src="Images/calci-proj.PNG" alt=""
+                  class="pi" id="pi2"></a>
             </div>
             <h5>Calculator</h5>
             <p>I have successfully developed a Calculator using HTML, CSS, and JavaScript. This project showcases my
@@ -309,10 +312,12 @@
           </div>
           <div class="project" id="proj-3">
             <div class="proj-img" id="proj-img-3">
-              <a href="https://gaddevinay.github.io/hcrafts/" target="_blank"><img src="Images/hcrafts-proj.png" alt="" class="pi" id="pi3"></a>
+              <a href="https://gaddevinay.github.io/hcrafts/" target="_blank"><img src="Images/hcrafts-proj.png" alt=""
+                  class="pi" id="pi3"></a>
             </div>
             <h5>Hcrafts</h5>
-            <p>I have successfully developed a Hand Crafts e-commerce website using HTML, CSS, and JavaScript. This project showcases my
+            <p>I have successfully developed a Hand Crafts e-commerce website using HTML, CSS, and JavaScript. This
+              project showcases my
               proficiency in these technologies and my ability to create dynamic and interactive web applications</p>
           </div>
           <div class="project" id="proj-cm">
@@ -326,15 +331,24 @@
 
 
       <!-- Contact Section Start -->
-      <section class="contact" id="contact">
-        <h3>Contact Me</h3> 
-        <!--<form action="https://portfoliogaddevinay.000webhostapp.com/connect.php" method="post">-->
+      <!--<section class="contact" id="contact">
+        <h3>Contact Me</h3>
         <form action="https://formspree.io/f/xqakkzkw" method="post">
           <input type="text" name="name" id="name" placeholder="Your Name" required>
           <input type="email" name="email" id="mail" placeholder="Your Email" required>
           <textarea name="comment" type="text" id="area" cols="30" rows="10" placeholder="Write Message Here..."
             required></textarea>
           <input type="submit" id="submit" value="Send" onclick="success()" class="contact-button">
+        </form>
+      </section>-->
+      <section class="contact" id="contact">
+        <h3>Contact Me</h3>
+        <form id="contactForm">
+          <input type="text" name="name" id="name" placeholder="Your Name" required>
+          <input type="email" name="email" id="mail" placeholder="Your Email" required>
+          <textarea name="comment" id="area" cols="30" rows="10" placeholder="Write Message Here..."
+            required></textarea>
+          <input type="submit" id="submit" value="Send" class="contact-button">
         </form>
       </section>
 
@@ -351,7 +365,32 @@
       </div>
       <p>Copyright © 2023 <a href=""><span>Vinay's</span></a> , All Rights Reserved.</p>
     </div>
-
+    <script type="module">
+      // Import Firebase SDK modules
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+    
+      // Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAt_Nku_2YpJSsdxpAyeXgRq1fG8Yapmjk",
+        authDomain: "portfolio-fd7ea.firebaseapp.com",
+        projectId: "portfolio-fd7ea",
+        storageBucket: "portfolio-fd7ea.appspot.com", // Fixed incorrect storage bucket domain
+        messagingSenderId: "663030683124",
+        appId: "1:663030683124:web:9b48afde38620b2b0595a1",
+        measurementId: "G-WMW1WDR3ZQ"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      getAnalytics(app);
+      const db = getFirestore(app);
+    
+      // Form submission event listener
+      
+    </script>
+    
     <script src="portfolio.js"></script>
   </section>
 </body>
