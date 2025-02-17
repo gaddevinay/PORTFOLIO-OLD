@@ -386,6 +386,10 @@ h5 {
 
 #about h4 {
     text-align: center;
+    margin-bottom: 15px;
+}
+#about h4 span{
+    color: rgb(0, 204, 255);
 }
 
 #about-details {
@@ -399,7 +403,7 @@ h5 {
 }
 
 .mybio {
-    text-align: center;
+    text-align: justify;
 }
 
 .nav-item {
@@ -826,16 +830,16 @@ form #submit:hover {
 
 .footer {
     background: #01232a;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto;
     align-items: center;
-    height: 100px;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 .footer p {
     font-size: 15px;
+    margin: 0px;
 }
 
 .footer p span {
@@ -1050,6 +1054,21 @@ form #submit:hover {
         justify-content: center;
     }
 
+}
+
+@media(max-width:620px) {
+    .footer {
+        justify-content: center;
+        grid-template-columns: auto auto;
+    }
+
+    .footer p {
+        grid-column: span 2;
+    }
+
+    .footer #logo {
+        width: 50px;
+    }
 }
 
 @media(max-width:420px) {

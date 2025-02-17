@@ -18,7 +18,6 @@ const newTextDelay = 2000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 function type() {
-
   if (charIndex < textArray[textArrayIndex].length) {
     if (!cursorSpan.classList.contains("typing"))
       cursorSpan.classList.add("typing");
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-
 function bodyclose() {
   var x = document.getElementById("display");
   if (x.style.display == "flex") {
@@ -64,7 +62,6 @@ function bodyclose() {
 
     x.style.display = "none";
   }
-
 }
 /*
 function success() {
@@ -88,15 +85,21 @@ for (var i = 0; i < btns.length; i++) {
 }
 */
 /*CERIFICATE AND EDUCATION BUTTON*/
-document.getElementById('pills-education-tab').addEventListener('click', function() {
-  document.getElementById('pills-education').classList.remove('hidden');
-  document.getElementById('pills-certificates').classList.add('hidden');
-  document.getElementById('pills-certificates-mtab').classList.remove('active');
-  document.getElementById('pills-education-mtab').classList.add('active');
-});
-document.getElementById('pills-certificates-tab').addEventListener('click', function() {
-  document.getElementById('pills-certificates').classList.remove('hidden');
-  document.getElementById('pills-education').classList.add('hidden');
-  document.getElementById('pills-certificates-mtab').classList.add('active');
-  document.getElementById('pills-education-mtab').classList.remove('active');
-});
+document
+  .getElementById("pills-education-tab")
+  .addEventListener("click", function () {
+    document.getElementById("pills-education").classList.remove("hidden");
+    document.getElementById("pills-certificates").classList.add("hidden");
+    document
+      .getElementById("pills-certificates-mtab")
+      .classList.remove("active");
+    document.getElementById("pills-education-mtab").classList.add("active");
+  });
+document
+  .getElementById("pills-certificates-tab")
+  .addEventListener("click", function () {
+    document.getElementById("pills-certificates").classList.remove("hidden");
+    document.getElementById("pills-education").classList.add("hidden");
+    document.getElementById("pills-certificates-mtab").classList.add("active");
+    document.getElementById("pills-education-mtab").classList.remove("active");
+  });

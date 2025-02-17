@@ -67,15 +67,19 @@
       <!-- About Section Start -->
 
       <section class="about" id="about">
-        <h4>About me</h4>
+        <h4>About <span>Me</span></h4>
         <div id="about-img-details">
           <div id="about-img">
           </div>
           <div id="about-details">
             <div id="about-content">
-              <p class="mybio">My name is Gadde Vinay and I'm always lokking out for learning new.I'm very curios and
-                intrested in my
-                ambition .I strongly believe in accuracy and precision in whatever I do.</p>
+              <p class="mybio">Hi, I'm Gadde Vinay, a passionate Computer Science and Engineering student.
+                I love learning new things and constantly seek opportunities to grow.
+                Working on challenging projects that spark creativity excites me.
+                Collaboration and problem-solving drive my passion for coding.
+                Beyond tech, I enjoy watching Cricket and Movies in my free time.
+                I'm always open to new opportunities, collaborations, and discussions.
+              </p>
               <div class="tab-pane con-active" id="pills-skill" style="display: block;">
                 <div class="single-progress">
                   <h6>HTML, CSS, Java-Script, Bootstrap</h6>
@@ -370,7 +374,7 @@
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
       import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-    
+
       // Firebase configuration
       const firebaseConfig = {
         apiKey: "AIzaSyAt_Nku_2YpJSsdxpAyeXgRq1fG8Yapmjk",
@@ -381,27 +385,27 @@
         appId: "1:663030683124:web:9b48afde38620b2b0595a1",
         measurementId: "G-WMW1WDR3ZQ"
       };
-    
+
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       getAnalytics(app);
       const db = getFirestore(app);
-    
+
       // Form submission event listener
       document.getElementById('submit').addEventListener('click', async (event) => {
         event.preventDefault(); // Prevent default form submission
-      
+
         // Get form values
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('mail').value.trim();
         const comment = document.getElementById('area').value.trim();
-      
+
         // Validate input fields
         if (!name || !email || !comment) {
           alert("All fields are required!");
           return;
         }
-      
+
         try {
           // Add data to Firestore collection
           const docRef = await addDoc(collection(db, "contacts"), {
@@ -410,11 +414,11 @@
             comment: comment,
             timestamp: new Date() // Store submission time
           });
-      
+
           // Show success message
           alert("Your message has been sent successfully!");
           console.log("Document written with ID: ", docRef.id);
-      
+
           // Clear form fields after submission
           document.getElementById('name').value = "";
           document.getElementById('mail').value = "";
@@ -425,7 +429,7 @@
         }
       });
     </script>
-    
+
     <script src="portfolio.js"></script>
   </section>
 </body>
