@@ -85,30 +85,38 @@ document
   });
 
 /*Contact Form*/
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-  event.preventDefault();
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("mail").value;
-  const message = document.getElementById("area").value;
-  const responseMessage = document.getElementById("response-message");
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("mail").value;
+    const message = document.getElementById("area").value;
+    const responseMessage = document.getElementById("response-message");
 
-  responseMessage.textContent = "Sending..."; // Show a message while sending
-  responseMessage.style.color = "blue";
+    responseMessage.textContent = "Sending..."; // Show a message while sending
+    responseMessage.style.color = "blue";
 
-  try {
-      const response = await fetch("/api/send-email.js", { // Ensure API path is correct
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message }),
+    try {
+      const response = await fetch("/api/send-email.js", {
+        // Ensure API path is correct
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
       });
 
       const data = await response.json();
       responseMessage.textContent = data.message;
       responseMessage.style.color = response.ok ? "green" : "red";
-  } catch (error) {
+      if (response.ok) {
+        setTimeout(() => {
+          window.location.reload(); // Ensure full page refresh
+        }, 2000);
+      }
+    } catch (error) {
       console.error("Error:", error);
       responseMessage.textContent = "Error sending email.";
       responseMessage.style.color = "red";
-  }
-});
+    }
+  });
