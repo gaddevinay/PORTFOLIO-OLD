@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Website Icon" type="png" href="Images/logo.png">
+  <title> Vinay</title>
+  <link rel="stylesheet" href="portfolio.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body id="body">
+  <section>
+    <!-- Navbar  Section Start -->
+    <nav class="nav-bar">
+      <div id="row">
+        <img id="logo" src="/Images/logo.png">
+        <div id="menu-icon" onclick="myFunction(this)">
+          <p id="first"></p>
+          <p id="second"></p>
+          <p id="third"></p>
+        </div>
+      </div>
+      <div id="navbar">
+        <ul id="display">
+          <li><a href="#home" onclick="bodyclose()">Home</a></li>
+          <li><a href="#about" onclick="bodyclose()">About</a></li>
+          <li><a href="#projects" onclick="bodyclose()">Projects</a></li>
+          <li><a href="#contact" onclick="bodyclose()">Contact</a></li>
+          <!---<li class="bx bx-moon" id="darkmode" onclick="mymoon(this)"></li>-->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Navbar Section End -->
+    <main id="main" onclick="bodyclose()">
+      <!-- Home Section Start -->
+      <section class="home" id="home">
+        <div id="home-img-div">
+          <div id="home-div">
+            <h5>WELLCOME TO MY PORTFOLIO</h5>
+            <h4>I'm <span>Vinay</span></h4>
+            <p>I am an Enthusiastic Engineering Student with a deep passion for Programming. Currently pursuing
+              my studies in Computer Science and Engineering.</p>
+            <h6>I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h6>
+            <div id="icons">
+              <a href="https://github.com/gaddevinay/" target="_blank"><i class="bx bxl-github"></i></a>
+              <a href="https://www.instagram.com/gadde_vinay" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/vinay-gadde/" target="_blank"><i
+                  class="bx bxl-linkedin-square"></i></a>
+              <a href="https://www.facebook.com/gaddevinay2005" target="_blank"><i
+                  class="bx bxl-facebook-circle"></i></a>
+            </div>
+            <a id="downloadcv" href="Resume Vinay.pdf" target="_blank">download cv</a>
+          </div>
+          <div id="home-img">
+            <img id="profile-img" src="/Images/profile.jpg" href="#">
+          </div>
+        </div>
+
+      </section>
+      <!-- Home Section End -->
+      <!-- About Section Start -->
+
+      <section class="about" id="about">
+        <h4>About <span>Me</span></h4>
+        <div id="about-img-details">
+          <div id="about-img">
+          </div>
+          <div id="about-details">
+            <div id="about-content">
+              <p class="mybio">Hi, I'm Gadde Vinay, a passionate Computer Science and Engineering student.
+                I love learning new things and constantly seek opportunities to grow.
+                Working on challenging projects that spark creativity excites me.
+                Collaboration and problem-solving drive my passion for coding.
+                Beyond tech, I enjoy watching Cricket and Movies in my free time.
+                I'm always open to new opportunities, collaborations, and discussions.
+              </p>
+              <div class="tab-pane con-active" id="pills-skill" style="display: block;">
+                <div class="single-progress">
+                  <h6>HTML, CSS, Java-Script, Bootstrap</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">95%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>Problem Solving Skills</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">80%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>Programming Language Competencies</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">80%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>C, C++, DSA with C++</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">85%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>Python, DBMS, Java</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 83%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">83%</span>
+                </div>
+              </div>
+              <div class="pt-4">
+                <ul class="nav-pills" id="pills-tab" role="tablist">
+
+                  <li class="nav-item active" id="pills-education-mtab" role="presentation">
+                    <button class="nav-link" id="pills-education-tab">Education</button>
+                  </li>
+
+                  <li class="nav-item" id="pills-certificates-mtab" role="presentation">
+                    <button class="nav-link" id="pills-certificates-tab">Certificates</button>
+                  </li>
+
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane con-active" id="pills-education">
+                    <div class="timeline">
+                      <div class="timeline-month">
+                        &nbsp;&nbsp;Education
+                      </div>
+                      <div class="timeline-section">
+                        <div class="timeline-date">
+                          2022 - Present
+                        </div>
+                        <div class="row">
+                          <div class="col-lg">
+                            <div class="timeline-box">
+                              <div class="box-title">
+                                SIR C.R REDDY COLLEGE OF ENGINEERING
+                                <p class="degree">B.Tech in Computer Science & Engineering</p>
+                              </div>
+                              <div class="box-content">
+                                <div class="box-item">📕 I am currently pursuing a B.Tech degree in Computer Science &
+                                  Engineering.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="timeline-section">
+                        <div class="timeline-date">
+                          2020 - 2022
+                        </div>
+                        <div class="row">
+                          <div class="col-lg">
+                            <div class="timeline-box">
+                              <div class="box-title">
+                                N.R.I JUNIOR COLLEGE
+                                <p class="degree">Andhra Pradesh Board of Intermediate Education</p>
+                              </div>
+                              <div class="box-content">
+                                <div class="box-item">📕 I have completed my studies in the M.P.C stream, with a focus
+                                  on subjects such as Physics, Chemistry, and Mathematics. </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="timeline-section">
+                        <div class="timeline-date">
+                          2019 - 2020
+                        </div>
+                        <div class="row">
+                          <div class="col-lg">
+                            <div class="timeline-box">
+                              <div class="box-title">
+                                SRI SURYA E.M HIGH SCHOOL
+                                <p class="degree">
+                                  Andhra Pradesh Board of Secondary Education</p>
+                              </div>
+                              <div class="box-content">
+
+                                <div class="box-item">📕 I have completed my 10th class from theBoard of Secondary
+                                  Education Andhra
+                                  Pradesh. </div>
+
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane hidden" id="pills-certificates">
+                  <div class="certificates" id="certificates">
+                    <h4>CERTIFICATES</h4>
+                    <div class="allcertificates">
+                      <a href="https://www.freecodecamp.org/certification/vinaygadde/responsive-web-design"
+                        target="_blank">
+                        <div class="certificate" id="cert-1">
+                          <div class="cert-img" id="cert-img-1">
+                            <img src="/CERTIFICATES/freecodecampresponsivewebdesign.jpg" alt="" class="ci" id="ci1">
+                          </div>
+                          <h5>Web Design</h5>
+                          <p>-Freecodecamp</p>
+                        </div>
+                      </a>
+                      <a href="https://www.guvi.in/share-certificate/9618cr1737y6LVN971" target="_blank">
+                        <div class="certificate" id="cert-2">
+                          <div class="cert-img" id="cert-img-2">
+                            <img src="/CERTIFICATES/guvipython.jpg" alt="" class="ci" id="ci2">
+                          </div>
+                          <h5>Python</h5>
+                          <p>-GUVI</p>
+                        </div>
+                      </a>
+                      <a href="https://www.hackerrank.com/certificates/2f6e05583602" target="_blank">
+                        <div class="certificate" id="cert-3">
+                          <div class="cert-img" id="cert-img-3">
+                            <img src="/CERTIFICATES/hackerrankcss.jpg" alt="" class="ci" id="ci3">
+                          </div>
+                          <h5>CSS</h5>
+                          <p>-Hackerrank</p>
+                        </div>
+                      </a>
+                      <a href="https://www.sololearn.com/en/certificates/CC-SCZK0C7E" target="_blank">
+                        <div class="certificate" id="cert-4">
+                          <div class="cert-img" id="cert-img-4">
+                            <img src="/CERTIFICATES/sololearnjavascript.jpg" alt="" class="ci" id="ci4">
+                          </div>
+                          <h5>Java Script</h5>
+                          <p>-Sololearn</p>
+                        </div>
+                      </a>
+                      <a href="CERTIFICATES/1-2143478e-b92c-4094-831e-7e3c61aac0c5.pdf" target="_blank">
+                        <div class="certificate" id="cert-4">
+                          <div class="cert-img" id="cert-img-4">
+                            <img src="/CERTIFICATES/infosysspringboardhtml5.jpg" alt="" class="ci" id="ci4">
+                          </div>
+                          <h5>HTML</h5>
+                          <p>-Infosys Springboard</p>
+                        </div>
+                      </a>
+                      <a href="https://unstop.com/certificate-preview/3806a793-8b16-42f8-8f85-eeb09c606d0f"
+                        target="_blank">
+                        <div class="certificate" id="cert-5">
+                          <div class="cert-img" id="cert-img-5">
+                            <img src="/CERTIFICATES/unstopflipkart.jpg" alt="" class="ci" id="ci5">
+                          </div>
+                          <h5>Flikart Grid</h5>
+                          <p>-Unstop</p>
+                        </div>
+                      </a>
+                      <a href="CERTIFICATES/Gadde Vinay_certificate.pdf" target="_blank">
+                        <div class="certificate" id="cert-5">
+                          <div class="cert-img" id="cert-img-5">
+                            <img src="/CERTIFICATES/skilldzirecertficate.png" alt="" class="ci" id="ci5">
+                          </div>
+                          <h5>Internship</h5>
+                          <p>-SkillDzire Cyber Security</p>
+                        </div>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section End -->
+
+      <!-- Projects Section Start -->
+
+      <section class="projects" id="projects">
+        <h4>Projects</h4>
+        <div class="allprojects">
+          <div class="project" id="proj-1">
+            <div class="proj-img" id="proj-img-1">
+              <a href="https://github.com/gaddevinay/NETFLIX-CLONE" target="_blank"><img src="/Images/netflix-proj.PNG"
+                  alt="" class="pi" id="pi1"></a>
+            </div>
+            <h5>Netflix-Clone</h5>
+            <p>I have successfully developed a Netflix clone using HTML, CSS, and JavaScript. This project showcases my
+              proficiency in these technologies and my ability to create dynamic and interactive web applications.</p>
+          </div>
+          <div class="project" id="proj-2">
+            <div class="proj-img" id="proj-img-2">
+              <a href="https://gaddevinay.github.io/Calculator/" target="_blank"><img src="/Images/calci-proj.PNG" alt=""
+                  class="pi" id="pi2"></a>
+            </div>
+            <h5>Calculator</h5>
+            <p>I have successfully developed a Calculator using HTML, CSS, and JavaScript. This project showcases my
+              proficiency in these technologies and my ability to create dynamic and interactive web applications</p>
+          </div>
+          <div class="project" id="proj-3">
+            <div class="proj-img" id="proj-img-3">
+              <a href="https://gaddevinay.github.io/hcrafts/" target="_blank"><img src="/Images/hcrafts-proj.png" alt=""
+                  class="pi" id="pi3"></a>
+            </div>
+            <h5>Hcrafts</h5>
+            <p>I have successfully developed a Hand Crafts e-commerce website using HTML, CSS, and JavaScript. This
+              project showcases my
+              proficiency in these technologies and my ability to create dynamic and interactive web applications</p>
+          </div>
+          <div class="project" id="proj-cm">
+            <h6>Coming Soon...</h4>
+          </div>
+        </div>
+
+
+      </section>
+      <!--Projects section End-->
+
+
+      <!-- Contact Section Start -->
+      <section class="contact" id="contact">
+        <h3>Contact Me</h3>
+        <form id="contactForm">
+          <input type="text" name="name" id="name" placeholder="Your Name" required>
+          <input type="email" name="email" id="mail" placeholder="Your Email" required>
+          <textarea name="comment" id="area" cols="30" rows="10" placeholder="Write Message Here..."
+            required></textarea>
+          <input type="submit" id="submit" value="Send" class="contact-button">
+        </form>
+        <p id="response-message"></p>
+      </section>
+
+    </main>
+    <!-- Contact Section End -->
+
+    <div class="footer">
+      <img id="logo" src="/Images/logo.png">
+      <div id="icons">
+        <a href="https://github.com/gaddevinay/" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://www.instagram.com/gadde_vinay" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/vinay-gadde/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://www.facebook.com/gaddevinay2005" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+      </div>
+      <p>Copyright © 2023 <a href=""><span>Vinay's</span></a> , All Rights Reserved.</p>
+    </div>
+    <script src="portfolio.js"></script>
+  </section>
+</body>
+
+</html>
