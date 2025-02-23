@@ -120,3 +120,74 @@ document
       responseMessage.style.color = "red";
     }
   });
+// Smooth animation function (place this before launchRocket function)
+Math.easeInOutQuad = function (t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+};
+
+document.addEventListener("scroll", function () {
+  let rocket = document.getElementById("rocketBtn");
+  if (window.scrollY > 300) {
+    // Show rocket after scrolling 300px
+    rocket.style.display = "block";
+  } else {
+    rocket.style.display = "none";
+  }
+});
+
+function launchRocket() {
+  let rocket = document.getElementById("rocketBtn");
+  let blast = document.getElementById("blastGif");
+  let navbar = document.querySelector(".nav-bar");
+
+  let navbarHeight = navbar.offsetHeight; // Get dynamic navbar height
+  let startScroll = window.scrollY; // Current scroll position
+  let startBottom = parseInt(getComputedStyle(rocket).bottom) || 20; // Rocket's initial position
+  let targetBottom = window.innerHeight - navbarHeight - 50; // Final rocket position before blast
+  let duration = 1000; // 2 seconds
+  let startTime = null;
+
+  function animate(time) {
+    if (!startTime) startTime = time;
+    let progress = (time - startTime) / duration;
+    progress = Math.min(progress, 1); // Clamp progress to 1 (avoid overshooting)
+
+    let easedProgress = Math.easeInOutQuad(progress); // Smooth animation
+    let newScrollY = startScroll * (1 - easedProgress); // Scroll up
+    let newRocketPos =
+      startBottom + (targetBottom - startBottom) * easedProgress; // Move rocket up
+
+    window.scrollTo(0, newScrollY);
+    rocket.style.bottom = `${newRocketPos}px`;
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      finalizeRocket();
+    }
+  }
+
+  function finalizeRocket() {
+    window.scrollTo(0, 0); // Snap to top
+    
+    rocket.style.display = "none"; // Hide rocket
+    rocket.style.bottom = "-200px";
+    // Get navbar height dynamically
+    let navbarHeight = document.querySelector(".nav-bar").offsetHeight;
+
+    // Set blast position **above the navbar**
+    blast.style.top = `${navbarHeight - 40}px`; // Place blast right above navbar
+    blast.style.display = "block";
+
+    setTimeout(() => {
+      blast.style.display = "none"; // Hide blast after explosion
+      setTimeout(() => {
+        rocket.src = "/Images/rocket.png";
+        rocket.style.bottom = "20px";
+      }, 200); // Reset position
+    }, 700);
+  }
+  rocket.style.display = "block";
+  rocket.src = "/Images/rocket_launch.gif"; // Change to launch GIF
+  requestAnimationFrame(animate);
+}

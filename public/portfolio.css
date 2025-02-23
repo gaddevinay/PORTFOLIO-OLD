@@ -388,7 +388,8 @@ h5 {
     text-align: center;
     margin-bottom: 15px;
 }
-#about h4 span{
+
+#about h4 span {
     color: rgb(0, 204, 255);
 }
 
@@ -1160,3 +1161,22 @@ form #submit:hover {
     background-color: black;
 }
 */
+/* Rocket button styling */
+#rocketBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    display: none; /* Initially hidden */
+    transition: bottom 0.2s linear;
+    z-index: 10;
+}
+
+#blastGif {
+    display: none;
+    position: fixed;
+    width: 150px;
+    right: -20px;
+}
