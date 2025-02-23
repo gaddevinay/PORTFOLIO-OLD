@@ -144,7 +144,7 @@ function launchRocket() {
   let startScroll = window.scrollY; // Current scroll position
   let startBottom = parseInt(getComputedStyle(rocket).bottom) || 20; // Rocket's initial position
   let targetBottom = window.innerHeight - navbarHeight - 50; // Final rocket position before blast
-  let duration = 1000; // 2 seconds
+  let duration = 1500; // 2 seconds
   let startTime = null;
 
   function animate(time) {
