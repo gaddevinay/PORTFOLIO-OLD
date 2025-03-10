@@ -2,15 +2,21 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
 dotenv.config(); // Load environment variables
-
 export default async function handler(req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+    if (req.method === "OPTIONS") {
+        return res.status(200).end();
+    }
+
     if (req.method !== "POST") {
         return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    const { name, email, subject, message } = req.body;
-
-    if (!name || !email || !subject || !message) {
+    const { name, email, message } = req.body;
+    if (!name || !email || !message) {
         return res.status(400).json({ message: "All fields are required." });
     }
 
@@ -25,8 +31,8 @@ export default async function handler(req, res) {
 
         const mailOptions = {
             from: process.env.GMAIL_USER,
-            to: process.env.GMAIL_USER2, // Change this to the recipient email
-            subject: `New Contact Form Submission: ${subject}`,
+            to: process.env.GMAIL_USER2,
+            subject: `New Contact Form Submission from ${name}`,
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         };
 
