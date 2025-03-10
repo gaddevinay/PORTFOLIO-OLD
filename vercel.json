@@ -2,6 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "api/send-email.js", "use": "@vercel/node" },
+    { "src": "api/send-email2.js", "use": "@vercel/node" },
     { "src": "public/**/*", "use": "@vercel/static" }
   ],
   "routes": [
