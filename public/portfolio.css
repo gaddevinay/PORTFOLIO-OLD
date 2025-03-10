@@ -406,6 +406,12 @@ h5 {
 .mybio {
     text-align: justify;
 }
+@media (max-width: 600px) {
+    .mybio {
+        text-align: justify;
+        word-break: break-all;
+    }
+}
 
 .nav-item {
     list-style: none;
@@ -1002,6 +1008,7 @@ form #submit:hover {
 
     #home-div p {
         text-align: justify;
+        word-break: break-all;
     }
 
     main {
